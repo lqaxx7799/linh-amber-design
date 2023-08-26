@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'linh-amber-design';
+  public isMenuOpen = false;
+
+  public toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
