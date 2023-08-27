@@ -1,10 +1,11 @@
 <div class="layout-container">
   <div class="header-wrapper">
-    <div>logo</div>
+    <a [routerLink]="['']">logo</a>
     <div>
       <button class="menu-toggle" (click)="toggleMenu()">=</button>
     </div>
   </div>
+  <router-outlet></router-outlet>
 </div>
 
 <app-menu *ngIf="isMenuOpen"></app-menu>
