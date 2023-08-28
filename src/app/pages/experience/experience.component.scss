@@ -1,0 +1,24 @@
+.experience-title {
+  position: fixed;
+  z-index: 2000;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.experience-wrapper {
+  padding-top: 120px;
+  padding-right: 100px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
