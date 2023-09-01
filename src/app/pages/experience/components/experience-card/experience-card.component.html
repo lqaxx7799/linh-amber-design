@@ -1,1 +1,6 @@
-<div class="experience-card"></div>
+<a
+  class="experience-card"
+  [routerLink]="[item.url]"
+  (click)="onClick($event)"
+  style="background-image: url({{ item.thumbnailUrl }});"
+></a>

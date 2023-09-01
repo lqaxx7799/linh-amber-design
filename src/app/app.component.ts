@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
+import {NavigationEnd, Router, RouterEvent} from "@angular/router";
 import {filter} from "rxjs";
 
 @Component({
@@ -14,13 +14,16 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
+    document.body.style.overflow = this.router.url.match('experience/.*') ? 'hidden' : 'auto';
+
     this.router.events.pipe(filter(value => value instanceof NavigationEnd))
       .subscribe({
-        next: () => {
+        next: (routerEvent: RouterEvent) => {
           if (this.isMenuOpen) {
             this.isMenuOpen = false;
             document.body.style.overflow = 'auto';
           }
+          document.body.style.overflow = routerEvent.url.match('experience/.*') ? 'hidden' : 'auto';
         }
       });
   }

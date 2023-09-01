@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MenuComponent} from "./components/menu/menu.component";
+import {provideAnimations} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import {MenuComponent} from "./components/menu/menu.component";
     AppRoutingModule,
     MenuComponent,
   ],
-  providers: [],
+  providers: [provideAnimations()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

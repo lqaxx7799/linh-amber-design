@@ -1,11 +1,13 @@
 .experience-card {
-  background-color: gray;
+  background-size: 100%;
+  background-repeat: no-repeat;
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 2109 / 2879;
   cursor: pointer;
+  display: block;
   transition: transform 200ms ease-in-out;
   &:hover {
-    transform: scale(0.9);
+    transform: scale(0.85);
     transform-origin: center;
   }
 }

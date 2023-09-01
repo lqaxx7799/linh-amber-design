@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img, video {
+    max-width: initial;
+    height: initial;
+  }
+}
+
+@font-face {
+  font-family: "Swis721";
+  src: url("/assets/fonts/Swis721 Lt BT Light.ttf");
+}
+
+* {
+  font-family: 'Swis721', 'Roboto', serif;
+}
+
+.text-header {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.text-content {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.experience-detail-info {
+  margin-bottom: 24px;
+}
+
+.experience-detail-header {
+  margin-bottom: 12px;
+}

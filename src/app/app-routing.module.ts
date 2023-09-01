@@ -7,6 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/experience/experience-routing.module').then(m => m.ExperienceRoutingModule),
   },
   {
+    path: 'about-me',
+    loadChildren: () => import('./pages/about-me/about-me-routing.module').then(m => m.AboutMeRoutingModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact-routing.module').then(m => m.ContactRoutingModule),
+  },
+  {
     path: '',
     loadChildren: () => import('./pages/home/home-routing.module').then(m => m.HomeRoutingModule),
   },

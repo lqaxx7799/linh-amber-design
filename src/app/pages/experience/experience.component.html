@@ -1,8 +1,19 @@
 <div>
-  <div class="experience-title">120 eXperience</div>
+  <div class="experience-title">{{ experienceList.length }} Experiences</div>
   <div class="experience-wrapper">
     <div class="experience-grid">
-      <app-experience-card *ngFor="let _ of [].constructor(20)"></app-experience-card>
+      <app-experience-card
+        (click)="onDetailCardClick()"
+        *ngFor="let item of experienceList"
+        [item]="item"
+      ></app-experience-card>
     </div>
+  </div>
+  <div
+    *ngIf="showDetail" class="experience-detail-wrapper"
+    [@slide]="detailTriggerState"
+  >
+    <a [routerLink]="['/experience']" class="experience-detail-close-button">Close</a>
+    <router-outlet></router-outlet>
   </div>
 </div>
