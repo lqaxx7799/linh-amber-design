@@ -2,11 +2,6 @@ import {IExperienceListItem} from "../models/experience.model";
 
 export const ExperienceList: IExperienceListItem[] = [
   {
-    title: 'Personal Projects',
-    thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557692/linh-amber-design/experiences/atbklayrs1zynjfsiq8q.png',
-    url: '/experience/personal-projects',
-  },
-  {
     title: 'Hologram',
     thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557708/linh-amber-design/experiences/nnhkftucesgwpvohdjbf.png',
     url: '/experience/hologram',
@@ -15,6 +10,11 @@ export const ExperienceList: IExperienceListItem[] = [
     title: 'Elise',
     thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557693/linh-amber-design/experiences/bllqgfbhqm2quuozzs6u.png',
     url: '/experience/elise',
+  },
+  {
+    title: 'Personal Projects',
+    thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557692/linh-amber-design/experiences/atbklayrs1zynjfsiq8q.png',
+    url: '/experience/personal-projects',
   },
   {
     title: 'Lysilk',
