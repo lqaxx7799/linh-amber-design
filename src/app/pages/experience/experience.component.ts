@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {ExperienceCardComponent} from "./components/experience-card/experience-card.component";
 import {ExperienceList} from "../../constants/experience.constants";
@@ -32,7 +32,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 export class ExperienceComponent implements OnInit, OnDestroy {
   public readonly experienceList = ExperienceList;
   public showDetail = false;
-  public detailTriggerState = 'end';
+  public detailTriggerState = 'start';
 
   private destroy$ = new Subject<void>();
 
@@ -40,6 +40,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.showDetail = !this.router.url.endsWith('experience');
+    this.detailTriggerState = !this.router.url.endsWith('experience') ? 'end' : 'start';
 
     this.router.events
       .pipe(
@@ -49,7 +50,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (routeEvent: NavigationEnd) => {
           if (!routeEvent.url.endsWith('experience')) {
-            this.showDetail = true;
+            // this.showDetail = true;
           } else {
             this.detailTriggerState = 'start';
             setTimeout(() => {
@@ -66,9 +67,9 @@ export class ExperienceComponent implements OnInit, OnDestroy {
   }
 
   public onDetailCardClick() {
-    this.detailTriggerState = 'start';
+    this.showDetail = true;
     setTimeout(() => {
       this.detailTriggerState = 'end';
-    });
+    }, 50);
   }
 }
