@@ -1,0 +1,34 @@
+.image-viewer-fullscreen-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: grid;
+  backdrop-filter: blur(4px);
+}
+
+.image-viewer-fullscreen-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.image-viewer-fullscreen-img {
+  width: 100%;
+  height: 80vh;
+  object-fit: contain;
+  margin: auto;
+}
+
+.image-viewer-fullscreen-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}

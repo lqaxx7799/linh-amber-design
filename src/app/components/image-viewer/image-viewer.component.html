@@ -1,0 +1,18 @@
+<img
+  [src]="src"
+  [alt]="alt"
+  (click)="onViewFullscreen()"
+  class="{{ imgClass }} cursor-pointer"
+/>
+
+<div *ngIf="isFullScreen" class="image-viewer-fullscreen-wrapper">
+  <div class="image-viewer-fullscreen-backdrop" (click)="onExitFullscreen()"></div>
+  <img
+    class="image-viewer-fullscreen-img"
+    [src]="src"
+    [alt]="alt"
+  />
+  <button (click)="onExitFullscreen()" class="image-viewer-fullscreen-close">
+    Close
+  </button>
+</div>
