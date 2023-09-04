@@ -9,18 +9,16 @@
 }
 
 .experience-wrapper {
-  padding-top: 120px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding: 160px 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .experience-grid {
-  width: 70%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 .experience-detail-wrapper {
@@ -33,11 +31,43 @@
   left: 0;
   right: 0;
   background-color: white;
-  padding: 80px 100px;
+  padding: 30px 20px;
 }
 
 .experience-detail-close-button {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+
+@media (min-width: 640px) {
+  .experience-wrapper {
+    padding: 160px 50px;
+  }
+
+  .experience-grid {
+    gap: 24px;
+  }
+
+  .experience-detail-wrapper {
+    padding: 50px 40px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .experience-wrapper {
+    padding: 160px 80px;
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-wrapper {
+    padding: 160px 140px;
+  }
 }

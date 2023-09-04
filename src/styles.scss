@@ -49,11 +49,12 @@
 
 .experience-detail-header {
   margin-bottom: 12px;
+  padding-right: 40px;
 }
 
 .experience-detail-main {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .experience-group-title-wrapper {
@@ -91,5 +92,12 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-detail-main {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
