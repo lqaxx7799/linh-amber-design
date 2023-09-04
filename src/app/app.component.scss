@@ -27,8 +27,18 @@
   gap: 8px;
   align-items: center;
 
-  > a > img {
-    width: 32px;
+  > a {
+    display: none;
+    > img {
+      width: 32px;
+    }
   }
 }
 
+@media (min-width: 640px) {
+  .header-right-pane {
+    > a {
+      display: block;
+    }
+  }
+}

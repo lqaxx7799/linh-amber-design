@@ -1,1 +1,10 @@
 Elise
+
+<div
+  *ngIf="showDetail" class="experience-elise-landing-wrapper"
+  [@slide]="detailTriggerState"
+>
+  <a [routerLink]="['/experience/elise']" class="experience-elise-landing-close-button">Close</a>
+  <router-outlet></router-outlet>
+</div>
+

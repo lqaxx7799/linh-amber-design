@@ -25,7 +25,7 @@ const routes: Routes = [
       {
         path: 'bao-son',
         loadChildren: () => import('./components/experience-bao-son/experience-bao-son.routing.module')
-          .then(m => m.ExperienceBaoSonRoutingModule)
+          .then(m => m.ExperienceBaoSonRoutingModule),
       },
       {
         path: 'edu-pass',
@@ -33,7 +33,8 @@ const routes: Routes = [
       },
       {
         path: 'elise',
-        component: ExperienceEliseComponent,
+        loadChildren: () => import('./components/experience-elise/experience-elise.routing.module')
+          .then(m => m.ExperienceEliseRoutingModule),
       },
       {
         path: 'hat-dau-nho',

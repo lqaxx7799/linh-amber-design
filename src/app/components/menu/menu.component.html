@@ -2,29 +2,27 @@
   <div class="menu__container">
     <div class="menu__page-list">
       <a [routerLink]="['experience']" class="menu__page-list-item">
-        eXperience
+        Experiences
       </a>
-      <a class="menu__page-list-item">
+      <a [routerLink]="['about-me']" class="menu__page-list-item">
         About
       </a>
-      <a class="menu__page-list-item">
+      <a [routerLink]="['contact']" class="menu__page-list-item">
         Contact
       </a>
-      <a class="menu__page-list-item">
-        Hiring
-      </a>
     </div>
-    <div class="menu__sub-list">
-      <a class="menu__sub-list-item">
-        <div class="menu__sub-list-item__title">News</div>
+    <div class="menu__contact">
+      <a href="mailto:linhamber@gmail.com">
+        <img src="assets/images/icon-email.svg" alt="">
       </a>
-      <a class="menu__sub-list-item">
-        <div class="menu__sub-list-item__title">Virtual Showroom</div>
-        <div class="menu__sub-list-item__description">Something to say</div>
+      <a href="tel:+84123456788">
+        <img src="assets/images/icon-phone.svg" alt="">
       </a>
-      <a class="menu__sub-list-item">
-        <div class="menu__sub-list-item__title">Plus X Object</div>
-        <div class="menu__sub-list-item__description">Something to say</div>
+      <a href="#" target="_blank">
+        <img src="assets/images/icon-instagram.svg" alt="">
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/images/icon-whatsapp.svg" alt="">
       </a>
     </div>
   </div>
