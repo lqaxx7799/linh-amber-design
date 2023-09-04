@@ -24,7 +24,8 @@ const routes: Routes = [
     children: [
       {
         path: 'bao-son',
-        component: ExperienceBaoSonComponent,
+        loadChildren: () => import('./components/experience-bao-son/experience-bao-son.routing.module')
+          .then(m => m.ExperienceBaoSonRoutingModule)
       },
       {
         path: 'edu-pass',
