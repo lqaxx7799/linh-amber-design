@@ -8,10 +8,17 @@
   left: 0;
   right: 0;
   background-color: white;
+  padding: 30px 20px;
 }
 
 .experience-elise-landing-close-button {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+
+@media (min-width: 640px) {
+  .experience-elise-landing-wrapper {
+    padding: 50px 40px;
+  }
 }
