@@ -5,6 +5,7 @@ import {ExperienceEliseAdsComponent} from "./components/experience-elise-ads/exp
 import {ExperienceEliseCoverComponent} from "./components/experience-elise-cover/experience-elise-cover.component";
 import {ExperienceEliseEcomComponent} from "./components/experience-elise-ecom/experience-elise-ecom.component";
 import {ExperienceElisePostComponent} from "./components/experience-elise-post/experience-elise-post.component";
+import {ExperienceEliseAppComponent} from "./components/experience-elise-app/experience-elise-app.component";
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
       {
         path: 'ads',
         component: ExperienceEliseAdsComponent,
+      },
+      {
+        path: 'app',
+        component: ExperienceEliseAppComponent,
       },
       {
         path: 'cover',

@@ -3,13 +3,14 @@ import {CommonModule} from "@angular/common";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {filter, Subject, takeUntil} from "rxjs";
 import {NavigationEnd, Router, RouterLink, RouterOutlet} from "@angular/router";
+import {ImageViewerComponent} from "../../../../components/image-viewer/image-viewer.component";
 
 @Component({
   selector: 'app-experience-hologram',
   standalone: true,
   templateUrl: 'experience-elise.component.html',
   styleUrls: ['experience-elise.component.scss'],
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLink, ImageViewerComponent],
   animations: [
     trigger('slide', [
       state('start', style({

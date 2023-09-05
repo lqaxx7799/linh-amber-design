@@ -1,0 +1,32 @@
+.about-me-intro {
+  background-color: #3F75D4;
+  color: white;
+  width: 100%;
+  padding: 20px 32px;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.about-me-content {
+  font-size: 24px;
+
+  > p {
+    margin-bottom: 16px;
+  }
+}
+
+.about-me-resume-wrapper {
+  position: relative;
+  margin-top: 80px;
+}
+
+.about-me-resume {
+  width: 100%;
+}
+
+.about-me-profile-picture {
+  position: absolute;
+  top: -10%;
+  right: 4%;
+  width: 45%;
+}

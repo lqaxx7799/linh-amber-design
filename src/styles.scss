@@ -95,9 +95,38 @@
   }
 }
 
+.page-container {
+  padding: 160px 20px;
+}
+
+.experience-description {
+  text-align: center;
+  width: 85%;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding: 160px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding: 160px 80px;
+  }
+}
+
 @media (min-width: 1024px) {
+  .page-container {
+    padding: 160px 140px;
+  }
+
   .experience-detail-main {
     padding-left: 80px;
     padding-right: 80px;
   }
 }
+
