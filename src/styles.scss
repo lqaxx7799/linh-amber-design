@@ -107,6 +107,183 @@
   margin-right: auto;
 }
 
+/* menu start */
+.menu {
+  position: absolute;
+  background-color: #000;
+  width: 22px;
+  height: 3px;
+  margin-top: 0;
+  display: flex;
+}
+
+.animate.menu{
+  animation-name: menu-menu;
+  animation-duration: 0.3s;
+}
+
+@keyframes menu-menu {
+  0% {
+    width:22px;
+    height:0px;
+  }
+  50% {
+    width:22px;
+    height:0px;
+  }
+  51%{
+    position: absolute;
+    background-color: #000;
+    width: 22px;
+    height: 3px;
+  }
+}
+
+.menu:after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 22px;
+  height: 3px;
+  margin-top: -8px;
+}
+
+.animate.menu:after {
+  animation-name: menu-after;
+  animation-duration: 0.3s;
+}
+
+@keyframes menu-after {
+  0% {
+    transform: rotate(-45deg);
+    margin-top:0px;
+  }
+  50% {
+    transform: rotate(0deg);
+    margin-top:0px;
+  }
+  100%{
+    transform: rotate(0deg);
+    margin-top:-8px;
+  }
+}
+
+.menu:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 22px;
+  height: 3px;
+  margin-top: 8px;
+}
+
+.animate.menu:before{
+  animation-name: menu-before;
+  animation-duration: 0.3s;
+}
+@keyframes menu-before {
+  0% {
+    transform: rotate(45deg);
+    margin-top:0px;
+  }
+  50% {
+    transform: rotate(0deg);
+    margin-top:0px;
+  }
+  100%{
+    transform: rotate(0deg);
+    margin-top:8px;
+  }
+}
+/* menu end */
+
+/* close start */
+.close {
+  position: absolute;
+  display: flex;
+  width: 22px;
+}
+
+.close.animate{
+  animation-name: close-close;
+  animation-duration: 0.3s;
+}
+
+@keyframes close-close {
+  0% {
+    position: absolute;
+    background-color: #000;
+    width: 22px;
+    height: 3px;
+    margin-top: 8px;
+  }
+  50% {
+    display:none;
+    width: 22px;
+    height: 3px;
+  }
+  100%{
+    width:22px;
+    height:0px;
+  }
+}
+
+.close:after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 22px;
+  height: 3px;
+  transform: rotate(45deg);
+}
+
+.animate.close:after {
+  animation-name: close-after;
+  animation-duration: 0.3s;
+}
+
+@keyframes close-after {
+  0% {
+    transform: rotate(0deg);
+    margin-top: 8px;
+  }
+  50% {
+    transform: rotate(0deg);
+    margin-top: 0;
+  }
+  100%{
+    transform: rotate(45deg);
+  }
+}
+
+.close:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 22px;
+  height: 3px;
+  transform: rotate(-45deg);
+}
+
+.animate.close:before {
+  animation-name: close-before;
+  animation-duration: 0.3s;
+}
+
+@keyframes close-before {
+  0% {
+    transform: rotate(0deg);
+    margin-top: -8px;
+  }
+  50% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+  }
+  100%{
+    transform: rotate(-45deg);
+  }
+}
+
 @media (min-width: 640px) {
   .page-container {
     padding: 160px 50px;

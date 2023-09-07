@@ -5,6 +5,7 @@ import {ExperienceList} from "../../constants/experience.constants";
 import {NavigationEnd, Router, RouterLink, RouterOutlet} from "@angular/router";
 import {filter, Subject, takeUntil} from "rxjs";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {IExperienceListItem} from "../../models/experience.model";
 
 @Component({
   selector: 'app-experience',
@@ -66,10 +67,11 @@ export class ExperienceComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  public onDetailCardClick() {
+  public onDetailCardClick(item: IExperienceListItem) {
     this.showDetail = true;
     setTimeout(() => {
       this.detailTriggerState = 'end';
+      this.router.navigate([item.url]).then();
     }, 50);
   }
 }

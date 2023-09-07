@@ -2,7 +2,7 @@
   <div class="experience-wrapper page-container">
     <div class="experience-grid">
       <app-experience-card
-        (click)="onDetailCardClick()"
+        (click)="onDetailCardClick(item)"
         *ngFor="let item of experienceList"
         [item]="item"
       ></app-experience-card>

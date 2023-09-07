@@ -16,10 +16,12 @@
       <a href="#" target="_blank">
         <img src="assets/images/icon-whatsapp.svg" alt="">
       </a>
-      <button class="menu-toggle" (click)="toggleMenu()">=</button>
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <span class="menu" #toggleIcon></span>
+      </button>
     </div>
   </div>
   <router-outlet></router-outlet>
 </div>
 
-<app-menu *ngIf="isMenuOpen"></app-menu>
+<app-menu *ngIf="isMenuOpen" [isOpen]="isSafeMenuOpen" (finishClose)="onMenuFinishClose()"></app-menu>

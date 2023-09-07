@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NavigationEnd, Router, RouterEvent} from "@angular/router";
 import {filter} from "rxjs";
 
@@ -10,6 +10,9 @@ import {filter} from "rxjs";
 export class AppComponent implements OnInit {
   title = 'linh-amber-design';
   public isMenuOpen = false;
+  public isSafeMenuOpen = false;
+
+  @ViewChild('toggleIcon') toggleIcon: ElementRef;
 
   constructor(private router: Router) {}
 
@@ -21,7 +24,11 @@ export class AppComponent implements OnInit {
         next: (routerEvent: RouterEvent) => {
           if (this.isMenuOpen) {
             this.isMenuOpen = false;
+            this.toggleIcon.nativeElement.className = "menu animate";
             document.body.style.overflow = 'auto';
+            setTimeout(() => {
+              this.isSafeMenuOpen = false;
+            });
           }
           document.body.style.overflow = routerEvent.url.match('experience/.*') ? 'hidden' : 'auto';
         }
@@ -29,7 +36,24 @@ export class AppComponent implements OnInit {
   }
 
   public toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-    document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto'
+    if (!this.isMenuOpen) {
+      this.isSafeMenuOpen = true;
+      this.isMenuOpen = true;
+      document.body.style.overflow = 'hidden';
+    } else {
+      this.isSafeMenuOpen = false;
+    }
+
+    if (this.toggleIcon.nativeElement.classList.contains("close")) {
+      this.toggleIcon.nativeElement.className = "menu animate";
+    } else {
+      this.toggleIcon.nativeElement.className = "close animate";
+    }
+  }
+
+  public onMenuFinishClose() {
+    this.isMenuOpen = false;
+    document.body.style.overflow = 'auto';
+    this.toggleIcon.nativeElement.className = "menu animate";
   }
 }

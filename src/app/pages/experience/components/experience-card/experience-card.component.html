@@ -1,6 +1,7 @@
 <a
   class="experience-card"
   [routerLink]="[item.url]"
-  style="background-image: url({{ item.thumbnailUrl }});"
   (click)="onClick($event)"
-></a>
+>
+  <img alt="" (load)="onImageLoaded()" [src]="item.thumbnailUrl" [@slide]="imageState" />
+</a>
