@@ -2,6 +2,23 @@
   class="experience-card"
   [routerLink]="[item.url]"
   (click)="onClick($event)"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
 >
-  <img alt="" (load)="onImageLoaded()" [src]="item.thumbnailUrl" [@slide]="imageState" />
+  <video
+    *ngIf="item.hoverThumbnailUrl"
+    autoplay
+    [muted]="'muted'"
+    loop
+    [@fade]="videoHoverState"
+    #videoHover
+  >
+    <source [src]="item.hoverThumbnailUrl">
+  </video>
+  <img
+    alt="" (load)="onImageLoaded()"
+    [src]="item.thumbnailUrl"
+    [@slide]="imageState"
+    [@fade]="imageHoverState"
+  />
 </a>

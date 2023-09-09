@@ -1,8 +1,9 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
+import {AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {IExperienceListItem} from "../../../../models/experience.model";
 import {RouterModule} from "@angular/router";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {set} from "@cloudinary/url-gen/actions/variable";
 
 const positions = ['Left', 'Right', 'Top', 'Bottom'];
 
@@ -42,11 +43,28 @@ const positions = ['Left', 'Right', 'Top', 'Bottom'];
         animate('0.5s ease-in-out'),
       ]),
     ]),
+    trigger('fade', [
+      state('start', style({
+        opacity: 0,
+      })),
+      state('end', style({
+        opacity: 1,
+      })),
+      transition('* => *', [
+        animate('0.3s ease-in-out'),
+      ]),
+    ]),
   ],
 })
 export class ExperienceCardComponent {
   public imageState: string;
   public position: string;
+  public isHover = false;
+  public imageHoverState = 'end';
+  public videoHoverState = 'start';
+
+  @ViewChild('videoHover') videoHoverRef: ElementRef;
+
   @Input() item: IExperienceListItem;
 
   @Output() click = new EventEmitter<MouseEvent>();
@@ -65,5 +83,28 @@ export class ExperienceCardComponent {
 
   public onClick(event: MouseEvent) {
     this.click.emit(event);
+  }
+
+  public onMouseEnter() {
+    if (!this.item.hoverThumbnailUrl) {
+      return;
+    }
+    this.videoHoverRef.nativeElement.play();
+    setTimeout(() => {
+      this.isHover = true;
+      this.imageHoverState = 'start';
+      this.videoHoverState = 'end';
+    });
+  }
+
+  public onMouseLeave() {
+    if (!this.item.hoverThumbnailUrl) {
+      return;
+    }
+    this.videoHoverRef.nativeElement.pause();
+    this.videoHoverRef.nativeElement.currentTime = 0;
+    this.isHover = false;
+    this.imageHoverState = 'end';
+    this.videoHoverState = 'start';
   }
 }

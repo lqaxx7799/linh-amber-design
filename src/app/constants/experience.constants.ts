@@ -5,6 +5,7 @@ export const ExperienceList: IExperienceListItem[] = [
     title: 'Hologram',
     thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557708/linh-amber-design/experiences/nnhkftucesgwpvohdjbf.png',
     url: '/experience/hologram',
+    hoverThumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/video/upload/v1694255248/linh-amber-design/experiences/e5yc2apqryrqq8auhg4m.mp4'
   },
   {
     title: 'Elise',
