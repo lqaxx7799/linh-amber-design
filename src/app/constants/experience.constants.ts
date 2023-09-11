@@ -13,11 +13,6 @@ export const ExperienceList: IExperienceListItem[] = [
     url: '/experience/elise',
   },
   {
-    title: 'Personal Projects',
-    thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557692/linh-amber-design/experiences/atbklayrs1zynjfsiq8q.png',
-    url: '/experience/personal-projects',
-  },
-  {
     title: 'Lysilk',
     thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557691/linh-amber-design/experiences/ggzbjjghht3tlwaemxjt.png',
     url: '/experience/lysilk',
@@ -26,6 +21,11 @@ export const ExperienceList: IExperienceListItem[] = [
     title: 'IME',
     thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557696/linh-amber-design/experiences/pa3aawnjqbirfbw90gxq.png',
     url: '/experience/ime',
+  },
+  {
+    title: 'Personal Projects',
+    thumbnailUrl: 'https://res.cloudinary.com/dzekisxnu/image/upload/v1693557692/linh-amber-design/experiences/atbklayrs1zynjfsiq8q.png',
+    url: '/experience/personal-projects',
   },
   {
     title: 'Rossie',
