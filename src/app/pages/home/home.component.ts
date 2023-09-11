@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {AfterViewInit, Component, ElementRef, ViewChild} from "@angular/core";
 import {CommonModule} from "@angular/common";
 
 @Component({
@@ -8,4 +8,10 @@ import {CommonModule} from "@angular/common";
   styleUrls: ['home.component.scss'],
   imports: [CommonModule],
 })
-export class HomeComponent {}
+export class HomeComponent implements AfterViewInit {
+  @ViewChild('videoHome') videoHomeRef: ElementRef;
+
+  ngAfterViewInit() {
+    this.videoHomeRef.nativeElement.play();
+  }
+}
