@@ -1,12 +1,14 @@
 import {Component, Input} from "@angular/core";
 import {CommonModule, NgOptimizedImage} from "@angular/common";
+import {LazyLoadImageModule} from "ng-lazyload-image";
+import {LazyImgDirective} from "../../directives/lazy-img.directive";
 
 @Component({
   selector: 'app-image-viewer',
   templateUrl: 'image-viewer.component.html',
   styleUrls: ['image-viewer.component.scss'],
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, LazyLoadImageModule],
 })
 export class ImageViewerComponent {
   @Input() src: string;

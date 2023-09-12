@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MenuComponent} from "./components/menu/menu.component";
 import {provideAnimations} from "@angular/platform-browser/animations";
-import {provideCloudinaryLoader} from "@angular/common";
+import {LazyLoadImageModule} from "ng-lazyload-image";
 
 @NgModule({
   declarations: [
@@ -15,6 +15,7 @@ import {provideCloudinaryLoader} from "@angular/common";
     BrowserModule,
     AppRoutingModule,
     MenuComponent,
+    LazyLoadImageModule,
   ],
   providers: [provideAnimations()],
   bootstrap: [AppComponent]
