@@ -3,7 +3,6 @@ import {CommonModule} from "@angular/common";
 import {IExperienceListItem} from "../../../../models/experience.model";
 import {RouterModule} from "@angular/router";
 import {animate, state, style, transition, trigger} from "@angular/animations";
-import {set} from "@cloudinary/url-gen/actions/variable";
 
 const positions = ['Left', 'Right', 'Top', 'Bottom'];
 
