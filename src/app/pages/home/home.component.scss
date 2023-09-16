@@ -9,10 +9,53 @@
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
+  opacity: 0.5;
 }
 
 @media (min-width: 640px) {
   .home-logo {
     width: 90vw;
+  }
+}
+
+.home__page-list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 20;
+  left: 4%;
+  top: 20%;
+  gap: 12px;
+}
+
+.home__page-list-item {
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline;
+  width: fit-content;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 4px;
+    background: #000;
+    height: 4px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
   }
 }

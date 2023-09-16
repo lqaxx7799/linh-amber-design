@@ -11,26 +11,32 @@ const routes: Routes = [
   {
     path: '',
     component: ExperienceEliseComponent,
+    title: 'Elise - Linh Amber\'s Design',
     children: [
       {
         path: 'ads',
         component: ExperienceEliseAdsComponent,
+        title: 'Elise Ads - Linh Amber\'s Design',
       },
       {
         path: 'app',
         component: ExperienceEliseAppComponent,
+        title: 'Elise Mess - Linh Amber\'s Design',
       },
       {
         path: 'cover',
         component: ExperienceEliseCoverComponent,
+        title: 'Elise Cover - Linh Amber\'s Design',
       },
       {
         path: 'ecom',
         component: ExperienceEliseEcomComponent,
+        title: 'Elise Ecom - Linh Amber\'s Design',
       },
       {
         path: 'post',
         component: ExperienceElisePostComponent,
+        title: 'Elise Post - Linh Amber\'s Design',
       },
     ]
   },

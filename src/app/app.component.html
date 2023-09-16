@@ -25,3 +25,12 @@
 </div>
 
 <app-menu *ngIf="isMenuOpen" [isOpen]="isSafeMenuOpen" (finishClose)="onMenuFinishClose()"></app-menu>
+
+<div class="splash-screen-wrapper" *ngIf="isSplashShown" [@fade]="splashState">
+  <video #videoHome autoplay playsinline [muted]="'muted'" class="splash-screen-video" *ngIf="!isSplashSuspend; else splashAlt">
+    <source src="assets/videos/logo.mp4" type="video/mp4"/>
+  </video>
+  <ng-template #splashAlt>
+    <img src="assets/images/logo.png" alt="" class="splash-screen-alt" />
+  </ng-template>
+</div>

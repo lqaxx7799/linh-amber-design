@@ -21,6 +21,7 @@ const routes: Routes = [
   {
     path: '',
     component: ExperienceComponent,
+    title: 'Experiences - Linh Amber\'s Design',
     children: [
       {
         path: 'bao-son',
@@ -30,6 +31,7 @@ const routes: Routes = [
       {
         path: 'edu-pass',
         component: ExperienceEduPassComponent,
+        title: 'EduPass - Linh Amber\'s Design',
       },
       {
         path: 'elise',
@@ -39,34 +41,42 @@ const routes: Routes = [
       {
         path: 'hat-dau-nho',
         component: ExperienceHatDauNhoComponent,
+        title: 'Hat Dau Nho - Linh Amber\'s Design',
       },
       {
         path: 'hologram',
         component: ExperienceHologramComponent,
+        title: 'Hologram - Linh Amber\'s Design',
       },
       {
         path: 'ime',
         component: ExperienceImeComponent,
+        title: 'IME - Linh Amber\'s Design',
       },
       {
         path: 'lysilk',
         component: ExperienceLysilkComponent,
+        title: 'Lysilk - Linh Amber\'s Design',
       },
       {
         path: 'other-projects',
         component: ExperienceOtherProjectsComponent,
+        title: 'Other Projects - Linh Amber\'s Design',
       },
       {
         path: 'personal-projects',
         component: ExperiencePersonalProjectsComponent,
+        title: 'Personal Projects - Linh Amber\'s Design',
       },
       {
         path: 'photo',
         component: ExperiencePhotoComponent,
+        title: 'Photo - Linh Amber\'s Design',
       },
       {
         path: 'rossie',
         component: ExperienceRossieComponent,
+        title: 'Rossie - Linh Amber\'s Design',
       },
     ]
   },

@@ -10,22 +10,27 @@ const routes: Routes = [
   {
     path: '',
     component: ExperienceBaoSonComponent,
+    title: 'Bao Son - Linh Amber\'s Design',
     children: [
       {
         path: '1',
         component: ExperienceBaoSon1Component,
+        title: 'Bao Son - Linh Amber\'s Design',
       },
       {
         path: '2',
         component: ExperienceBaoSon2Component,
+        title: 'Bao Son - Linh Amber\'s Design',
       },
       {
         path: '3',
         component: ExperienceBaoSon3Component,
+        title: 'Bao Son - Linh Amber\'s Design',
       },
       {
         path: '4',
         component: ExperienceBaoSon4Component,
+        title: 'Bao Son - Linh Amber\'s Design',
       },
     ]
   },

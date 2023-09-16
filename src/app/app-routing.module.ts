@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: 'about-me',
     loadChildren: () => import('./pages/about-me/about-me-routing.module').then(m => m.AboutMeRoutingModule),
+    title: 'About me - Linh Amber\'s Design',
   },
   {
     path: 'contact',
