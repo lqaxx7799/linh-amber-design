@@ -82,6 +82,9 @@ export class MenuComponent implements AfterViewInit {
 
   public onNavigate(event: MouseEvent, route: string) {
     event.preventDefault();
+    if (this.router.url.includes(route)) {
+      return;
+    }
     setTimeout(async () => {
       for (let i = this.routeStates.length - 1; i >= 0; i--) {
         this.routeStates[i] = 'start';
