@@ -58,7 +58,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.videoHomeRef.nativeElement.play()
-      .then(() => {})
+      .then(() => {
+        setTimeout(() => {
+          this.splashState = 'start';
+          setTimeout(() => {
+            this.isSplashShown = false;
+          }, 300);
+        }, 3500);
+      })
       .catch(() => {
         this.isSplashSuspend = true;
         setTimeout(() => {
