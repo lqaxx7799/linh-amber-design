@@ -15,8 +15,18 @@
   src: url("/assets/fonts/Swis721 Lt BT Light.ttf");
 }
 
+@font-face {
+  font-family: "Swiss721 Condensed";
+  src: url("/assets/fonts/Swiss721BT-LightCondensed.ttf");
+}
+
+
 * {
   font-family: 'Swis721', 'Roboto', serif;
+}
+
+.font-condensed {
+  font-family: 'Swiss721 Condensed', 'Roboto', serif;
 }
 
 .text-header {

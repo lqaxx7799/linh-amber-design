@@ -3,6 +3,16 @@ import {IExperienceListItem} from "../models/experience.model";
 export const ExperienceList: IExperienceListItem[] = [
   {
     title: 'Hologram',
+    thumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/cv etude 1.png',
+    url: '/experience/etude',
+  },
+  {
+    title: 'Hologram',
+    thumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/cv suwahsoo 1.png',
+    url: '/experience/sulwhasoo',
+  },
+  {
+    title: 'Hologram',
     thumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/nnhkftucesgwpvohdjbf.png',
     url: '/experience/hologram',
     hoverThumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/e5yc2apqryrqq8auhg4m.mp4'

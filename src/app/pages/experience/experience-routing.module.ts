@@ -16,6 +16,8 @@ import {
 } from "./components/experience-other-projects/experience-other-projects.component";
 import {ExperiencePhotoComponent} from "./components/experience-photo/experience-photo.component";
 import {ExperienceRossieComponent} from "./components/experience-rossie/experience-rossie.component";
+import { ExperienceEtudeComponent } from "./components/experience-etude/experience-etude.component";
+import { ExperienceSulwhasooComponent } from "./components/experience-sulwhasoo/experience-sulwhasoo.component";
 
 const routes: Routes = [
   {
@@ -37,6 +39,11 @@ const routes: Routes = [
         path: 'elise',
         loadChildren: () => import('./components/experience-elise/experience-elise.routing.module')
           .then(m => m.ExperienceEliseRoutingModule),
+      },
+      {
+        path: 'etude',
+        component: ExperienceEtudeComponent,
+        title: 'Etude - Linh Amber\'s Design',
       },
       {
         path: 'hat-dau-nho',
@@ -77,6 +84,11 @@ const routes: Routes = [
         path: 'rossie',
         component: ExperienceRossieComponent,
         title: 'Rossie - Linh Amber\'s Design',
+      },
+      {
+        path: 'sulwhasoo',
+        component: ExperienceSulwhasooComponent,
+        title: 'Sulwhasoo - Linh Amber\'s Design',
       },
     ]
   },
