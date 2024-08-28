@@ -18,6 +18,7 @@ import {ExperiencePhotoComponent} from "./components/experience-photo/experience
 import {ExperienceRossieComponent} from "./components/experience-rossie/experience-rossie.component";
 import { ExperienceEtudeComponent } from "./components/experience-etude/experience-etude.component";
 import { ExperienceSulwhasooComponent } from "./components/experience-sulwhasoo/experience-sulwhasoo.component";
+import { ExperienceJewelryComponent } from "./components/experience-jewelry/experience-jewelry.component";
 
 const routes: Routes = [
   {
@@ -59,6 +60,11 @@ const routes: Routes = [
         path: 'ime',
         component: ExperienceImeComponent,
         title: 'IME - Linh Amber\'s Design',
+      },
+      {
+        path: 'jewelry',
+        component: ExperienceJewelryComponent,
+        title: 'Jewelry',
       },
       {
         path: 'lysilk',

@@ -2,12 +2,17 @@ import {IExperienceListItem} from "../models/experience.model";
 
 export const ExperienceList: IExperienceListItem[] = [
   {
-    title: 'Hologram',
+    title: 'Jewelry',
+    thumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/jewelry.png',
+    url: '/experience/jewelry',
+  },
+  {
+    title: 'Etude',
     thumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/cv etude 1.png',
     url: '/experience/etude',
   },
   {
-    title: 'Hologram',
+    title: 'Sulwhasoo',
     thumbnailUrl: 'https://pub-6842579bafc44e4ca5c1712d83322b41.r2.dev/experiences/cv suwahsoo 1.png',
     url: '/experience/sulwhasoo',
   },
